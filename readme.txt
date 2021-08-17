@@ -2,7 +2,7 @@
 　DBの初期設定について
 ##############################
 
-・phpMysqlCrud2 ディレクトリ下で docker-compose up -d を実行（新たにコンテナを作り直す時は --build 追加）
+・プロジェクトディレクトリ下で docker-compose up -d を実行（新たにコンテナを作り直す時は --build 追加）
 docker exec -it mysql_host /bin/bash
 mysql -u root -p
 

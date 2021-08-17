@@ -28,13 +28,7 @@ function pdo($sql, $isPost, $post) {
     }
 }
 
-//function postData() {
 function postData($post) {
-//    $data = [
-//        "Name" => "Seiko",
-//        "Age" => 23,
-//        "HireDate" => "2018-06-28T00:00:00"
-//    ];
     $sql = "INSERT INTO test_table (name, age, hire_date) VALUES (:name, :age, :hire)";
     pdo($sql, true, $post);
 }
@@ -44,18 +38,11 @@ function getData() {
     pdo($sql, false, null);
 }
 
-//echo "JSON:" . PHP_EOL;
 $json = file_get_contents("php://input"); // POSTされたJSON文字列を取り出し
 $contents = json_decode($json, true); // JSON文字列をobjectに変換（第2引数をtrueにしないとハマるので注意）
 if(!array_key_exists("Name", $contents)) {
-//    echo "Not JSON";
-//    var_dump($_POST);
     $contents = $_POST;
-} else {
-//    echo "JSON";
 }
-
-//var_dump($contents);
 
 postData($contents);
 getData();

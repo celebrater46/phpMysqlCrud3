@@ -1,6 +1,5 @@
 <?php
 
-//define("URL", "http://localhost/index.php");
 define("URL", "http://localhost/controller.php");
 
 if($_POST["json"] === "ON") {
