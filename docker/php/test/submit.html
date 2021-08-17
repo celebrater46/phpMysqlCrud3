@@ -5,12 +5,45 @@
     <title>Test Form</title>
 </head>
 <body>
+    <h1>PHP CRUD TEST</h1>
+
+    <h2>Get</h2>
+    <p>全データを表示する。</p>
+    <form method="get" action="formToController.php">
+        <input type="submit" value="取得">
+    </form>
+    ############################################<br>
+
+    <h2>Post</h2>
+    <p>新しいデータを挿入する。</p>
     <form method="post" action="formToController.php">
         <input type="text" name="Name" size="15" value="Miyon"><br>
         <input type="text" name="Age" size="15" value="28"><br>
         <input type="text" name="HireDate" size="15" value="2018-06-28T00:00:00"><br>
         <label><input type="checkbox" name="json" value="ON"> Use JSON</label><br>
-        <input type="submit" value="送信">
+        <input type="submit" value="挿入">
     </form>
+    ############################################<br>
+
+    <h2>Put</h2>
+    <p>指定のIDのデータを書き換える。</p>
+    <form method="put" action="formToController.php">
+        <input type="text" name="id" size="4" value="1"><br>
+        <input type="text" name="Name" size="15" value="Miyon"><br>
+        <input type="text" name="Age" size="15" value="28"><br>
+        <input type="text" name="HireDate" size="15" value="2018-06-28T00:00:00"><br>
+        <label><input type="checkbox" name="json" value="ON"> Use JSON</label><br>
+        <input type="submit" value="更新">
+    </form>
+    ############################################<br>
+
+    <h2>Delete</h2>
+    <p>指定のIDのデータを削除する。</p>
+    <form method="delete" action="formToController.php">
+        <input type="text" name="id" size="4" value="1"><br>
+        <input type="submit" value="削除">
+    </form>
+    ############################################<br>
+
 </body>
 </html>
