@@ -40,6 +40,8 @@ function getData() {
 
 $json = file_get_contents("php://input"); // POSTされたJSON文字列を取り出し
 $contents = json_decode($json, true); // JSON文字列をobjectに変換（第2引数をtrueにしないとハマるので注意）
+
+// Warning: array_key_exists() expects parameter 2 to be array, null given in /var/www/html/controller.php on line 45
 if(!array_key_exists("Name", $contents)) {
     $contents = $_POST;
 }
